@@ -1,3 +1,42 @@
-<p>
-  signup works!
-</p>
+<div class="content-auth">
+  <nav>
+    <h2>MemeApp</h2>
+    <a routerLink="/auth/login" class="button is-link">Ingresar</a>
+  </nav>
+  <div class="card">
+
+    <div class="card-content">
+      <div class="title">
+          <h3>Registrarme</h3>
+      </div>
+      <form>
+       <div class="field">
+          <label class="label">Nombre</label>
+          <div class="control">
+            <input class="input" type="text" name="first_name" >
+          </div>
+        </div>
+         <div class="field">
+          <label class="label">Apellido</label>
+          <div class="control">
+            <input class="input" type="text" name="last_name" >
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control">
+            <input class="input" type="text" name="email" >
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Password</label>
+          <div class="control">
+            <input class="input" type="password" name="password">
+          </div>
+        </div>
+
+        <button type="submit" class="button is-primary"><span>Registrarme</span></button>   
+      </form>
+    </div>  
+  </div>
+</div>
