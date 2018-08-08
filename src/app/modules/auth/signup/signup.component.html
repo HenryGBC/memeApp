@@ -9,34 +9,70 @@
       <div class="title">
           <h3>Registrarme</h3>
       </div>
-      <form>
+      <form [formGroup]="signUpForm" (ngSubmit)="submitForm(signUpForm)" novalidate>
        <div class="field">
           <label class="label">Nombre</label>
           <div class="control">
-            <input class="input" type="text" name="first_name" >
+            <input class="input" type="text" name="first_name" formControlName="first_name">
+          </div>
+
+           <!-- Errors Manage -->
+          <div *ngIf="signUpForm.get('first_name').errors && showErrors" class="alert alert-danger">
+            <div *ngIf="signUpForm.get('first_name').errors['required']">
+              Nombre requerido
+            </div>
           </div>
         </div>
          <div class="field">
           <label class="label">Apellido</label>
           <div class="control">
-            <input class="input" type="text" name="last_name" >
+            <input class="input" type="text" name="last_name" formControlName="last_name">
+          </div>
+
+          <!-- Errors Manage -->
+          <div *ngIf="signUpForm.get('last_name').errors  && showErrors" class="alert alert-danger">
+            <div *ngIf="signUpForm.get('last_name').errors['required']">
+              Apellido requerido
+            </div>
           </div>
         </div>
         <div class="field">
           <label class="label">Email</label>
           <div class="control">
-            <input class="input" type="text" name="email" >
+            <input class="input" type="text" name="email" formControlName="email">
+          </div>
+
+           <!-- Errors Manage -->
+          <div *ngIf="signUpForm.get('email').errors  && showErrors" class="alert alert-danger">
+            <div *ngIf="signUpForm.get('email').errors['required']">
+              Email requerido
+            </div>
+            <div *ngIf="signUpForm.get('email').errors['email']">
+              Email incorrecto
+            </div>
           </div>
         </div>
         <div class="field">
           <label class="label">Password</label>
           <div class="control">
-            <input class="input" type="password" name="password">
+            <input class="input" type="password" name="password" formControlName="password">
+          </div>
+
+           <!-- Errors Manage -->
+          <div *ngIf="signUpForm.get('password').errors  && showErrors" class="alert alert-danger">
+            <div *ngIf="signUpForm.get('password').errors['required']">
+              Password requerido
+            </div>
+            <div *ngIf="signUpForm.get('password').errors['minlength']">
+              Password inseguro
+            </div>
           </div>
         </div>
-
-        <button type="submit" class="button is-primary"><span>Registrarme</span></button>   
+        <button type="submit" class="button is-primary"><span>Registrarme</span></button>
+        <div *ngIf="showErrorBack" class="alert alert-danger">
+          Email Existe o Password Invalido
+        </div>
       </form>
-    </div>  
+    </div>
   </div>
 </div>

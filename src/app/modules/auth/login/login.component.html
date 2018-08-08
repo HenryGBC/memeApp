@@ -9,22 +9,38 @@
     <div class="title">
           <h3>Ingresar</h3>
       </div>
-      <form>
+      <form [formGroup]="loginForm" (ngSubmit)="submitForm(loginForm)" >
         <div class="field">
           <label class="label">Email</label>
           <div class="control">
-            <input class="input" type="text" name="email" placeholder="email@email.com">
+            <input class="input" type="text" name="email" placeholder="email@email.com"  formControlName="first_name">
+          </div>
+          <div *ngIf="loginForm.get('email').errors  && showErrors" class="alert alert-danger">
+            <div *ngIf="loginForm.get('email').errors['required']">
+              Email requerido
+            </div>
+            <div *ngIf="loginForm.get('email').errors['email']">
+              Email incorrecto
+            </div>
           </div>
         </div>
         <div class="field">
           <label class="label">Password</label>
           <div class="control">
-            <input class="input" type="password" name="password">
+            <input class="input" type="password" name="password"  formControlName="first_name">
+          </div>
+          <div *ngIf="loginForm.get('password').errors  && showErrors" class="alert alert-danger">
+            <div *ngIf="loginForm.get('password').errors['required']">
+              Password requerido
+            </div>
           </div>
         </div>
 
-        <button type="submit" class="button is-primary"><span>Ingresar</span></button>   
+        <button type="submit" class="button is-primary"><span>Ingresar</span></button>
+        <div *ngIf="showErrorBack" class="alert alert-danger">
+          Email Inconrrecto o Contraseña Invalida
+        </div>
       </form>
-    </div>  
+    </div>
   </div>
 </div>
