@@ -7,12 +7,14 @@ import { AuthComponent } from './modules/auth/auth.component';
 import { AuthService } from './services/auth/auth.service';
 import { UtilsService } from './services/utils/utils.service';
 import {HttpClientModule} from '@angular/common/http';
+import { AdminComponent } from './modules/admin/admin.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AuthComponent
+    AuthComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
