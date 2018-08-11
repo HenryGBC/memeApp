@@ -1,0 +1,45 @@
+.navbar{
+  box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  .navbar-brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    .logo{
+      h3{
+        font-size: 19px;
+        letter-spacing: 4px;
+        font-weight: 600;
+      }
+    }
+    h4{
+      font-size: 17px;
+      color: #478df6;
+      letter-spacing: 5px;
+      font-weight: 700;
+      margin-left: 20px;
+    }
+  }
+
+  .navbar-item{
+    color: #9f9f9f !important;
+    font-weight: 600;
+    padding-bottom: 2px !important;
+    transition: all .2s ease-in;
+
+    &.active{
+      padding-bottom: 0 !important;
+      border-bottom: 3px solid #478df6 !important;
+      color: #478df6 !important;
+    }
+  }
+}
+
+.container-app{
+  min-height: 100vh;
+  padding-top: 70px;
+}

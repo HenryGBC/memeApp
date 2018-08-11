@@ -1,3 +1,41 @@
-<p>
-  admin works!
-</p>
+<nav class="navbar is-transparent" role="navigation" aria-label="dropdown navigation">
+  <div class="navbar-brand">
+    <div class="logo">
+        <h3>memeApp</h3>
+    </div>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" routerLink="/home" routerLinkActive="active">
+        Home
+      </a>
+      <a class="navbar-item" routerLink="/own" routerLinkActive="active">
+        Mis Memes
+      </a>
+
+    </div>
+
+    <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link" href="javascript:void(0)">
+              Perfil
+            </a>
+            <div class="navbar-dropdown is-boxed is-right">
+              <a class="navbar-item" href="javascript:void(0)"  >
+                Logout
+              </a>
+            </div>
+          </div>
+    </div>
+  </div>
+</nav>
+<div class="container container-app">
+  <router-outlet>
+    </router-outlet>
+</div>
