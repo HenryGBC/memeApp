@@ -28,6 +28,11 @@ export class AuthService {
     return JSON.parse(localStorage.getItem('meme.user'));
   }
 
+  isLogged() {
+    return this.getUser() ? true : false;
+  }
+
+
   logout() {
     localStorage.removeItem('meme.user');
     localStorage.removeItem('meme.token');

@@ -8,6 +8,9 @@ import { AuthService } from './services/auth/auth.service';
 import { UtilsService } from './services/utils/utils.service';
 import {HttpClientModule} from '@angular/common/http';
 import { AdminComponent } from './modules/admin/admin.component';
+import { AuthGuard } from './guards/auth.guard';
+import { LoginGuard } from './guards/login.guard';
+
 
 
 @NgModule({
@@ -21,7 +24,7 @@ import { AdminComponent } from './modules/admin/admin.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [AuthService, UtilsService],
+  providers: [AuthService, UtilsService, AuthGuard, LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

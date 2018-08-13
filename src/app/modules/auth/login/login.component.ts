@@ -29,14 +29,17 @@ export class LoginComponent implements OnInit {
     if (form.valid) {
       console.log(form.value);
       this.showErrors = false;
-      this.authService.login(form.value)
-        .subscribe((res:any)=>{
-            localStorage.setItem('meme.token', res.token);
-            this.router.navigateByUrl('/home');
-        }, err=>{
-          console.log(err)
-          this.showErrorBack = false;
-        });
+      localStorage.setItem('meme.user', JSON.stringify(form.value));
+      localStorage.setItem('meme.token', '1238018ASDHSAD12121');
+      this.router.navigateByUrl('/home');
+      // this.authService.login(form.value)
+      //   .subscribe((res:any)=>{
+      //       localStorage.setItem('meme.token', res.token);
+      //       this.router.navigateByUrl('/home');
+      //   }, err=>{
+      //     console.log(err)
+      //     this.showErrorBack = false;
+      //   });
     } else {
       this.showErrors = true;
     }
