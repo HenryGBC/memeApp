@@ -1,0 +1,39 @@
+.home-content{
+    .card{
+        max-width: 480px;
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 15px;
+
+        .card-content{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 30px;
+            .shared{
+                span{
+                    font-size: 25px;
+                    margin-right: 11px;
+                    cursor: pointer;
+
+                    &.instagram{
+                        color: #ff31d8;
+                    }
+                    &.facebook{
+                       color: #4c68d7;
+                    }
+                    &.twitter{
+                       color: #2aa9ef;
+                    }
+                }
+            }
+
+            .vote{
+                .fav{
+                    font-size: 25px;
+                    cursor: pointer;
+                    color: #f04848;
+                }
+            }
+        }
+    }
+}
