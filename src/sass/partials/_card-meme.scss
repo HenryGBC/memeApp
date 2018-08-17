@@ -1,0 +1,84 @@
+.card-meme{
+    max-width: 480px !important;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 15px;
+    
+    .cover-action{
+        position: absolute;
+        z-index: 100000;
+        background-image: linear-gradient( to top right, rgba(1, 1, 1, 0.05), rgba(1, 1, 1, 0.4) );
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        height: calc( 100% - 60px);
+        display: none;
+        .profile{
+            display: flex;
+            height: 30px;
+            align-items: center;
+            .avatar{
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                background: #00aeff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 12px;
+                color: #fff;
+                font-weight: 600;
+            }
+            .name{
+                font-size: 15px;
+                margin-left: 12px;
+                font-weight: 600;
+                color: #fff;
+            }
+        }
+        .date{
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
+        }
+    }
+    &:hover{
+        .cover-action{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    
+    .card-content{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 30px;
+        box-sizing: border-box;
+        height: 60px;
+        .shared{
+            span{
+                font-size: 25px;
+                margin-right: 11px;
+                cursor: pointer;
+
+                &.instagram{
+                    color: #ff31d8;
+                }
+                &.facebook{
+                    color: #4c68d7;
+                }
+                &.twitter{
+                    color: #2aa9ef;
+                }
+            }
+        }
+
+        .vote{
+            .fav{
+                font-size: 25px;
+                cursor: pointer;
+                color: #f04848;
+            }
+        }
+    }
+}
