@@ -10,6 +10,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { AdminComponent } from './modules/admin/admin.component';
 import { AuthGuard } from './guards/auth.guard';
 import { LoginGuard } from './guards/login.guard';
+import { MemeService } from './services/meme/meme.service';
+
 
 
 
@@ -24,7 +26,7 @@ import { LoginGuard } from './guards/login.guard';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [AuthService, UtilsService, AuthGuard, LoginGuard],
+  providers: [AuthService, UtilsService, AuthGuard, LoginGuard, MemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,43 @@
+<div class="card card-meme"  >
+  <div class="cover-action">
+    <div class="profile">
+      <div class="avatar">
+        <span>{{meme.profile.first_name.charAt(0)}}{{meme.profile.last_name.charAt(0)}}</span>
+      </div>
+      <div class="name">
+        <span>{{meme.profile.first_name}} {{meme.profile.last_name}}</span>
+      </div>
+    </div>
+    <div class="date">
+      <span>{{meme.date}}</span>
+    </div>
+  </div>
+  <div class="card-image">
+    <figure class="image is-4by3" [style.background-image]="getBackground(meme.img)">
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="shared">
+      <span class="instagram">
+        <i class="fab fa-instagram"></i>
+      </span>
+      <span class="facebook">
+        <i class="fab fa-facebook-f"></i>
+      </span>
+      <span class="twitter">
+        <i class="fab fa-twitter"></i>
+      </span>
+    </div>
+
+    <div class="vote">
+      <span class="fav" (click)="toggleFav(meme)" *ngIf="meme.fav" >
+        <i class="fas fa-heart" ></i>
+
+      </span>
+      <span class="fav" (click)="toggleFav(meme)" *ngIf="!meme.fav" >
+        <i class="far fa-heart"></i>
+      </span>
+    </div>
+
+  </div>
+</div>

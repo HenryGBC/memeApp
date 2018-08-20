@@ -1,0 +1,58 @@
+[
+
+  {
+      "id": "1",
+      "name": "Meme 1",
+      "img": "http://i.imgflip.com/1bij.jpg",
+      "date": "2018-08-08",
+      "profile": {
+          "first_name": "Henry",
+          "last_name": "Bravo"
+      },
+      "fav": false
+  },
+  {
+      "id": "2",
+      "name": "Meme 2",
+      "img": "http://i.imgflip.com/26am.jpg",
+      "date": "2018-08-08",
+      "profile": {
+          "first_name": "Henry",
+          "last_name": "Bravo"
+      },
+      "fav": false
+  },
+  {
+      "id": "3",
+      "name": "Meme 3",
+      "img": "https://i.imgflip.com/1ur9b0.jpg",
+      "date": "2018-08-08",
+      "profile": {
+          "first_name": "Henry",
+          "last_name": "Bravo"
+      },
+      "fav": false
+  },
+  {
+      "id": "4",
+      "name": "Meme 4",
+      "img": "https://i.imgflip.com/1g8my4.jpg",
+      "date": "2018-08-08",
+      "profile": {
+          "first_name": "Henry",
+          "last_name": "Bravo"
+      },
+      "fav": false
+  },
+  {
+      "id": "5",
+      "name": "Meme 5",
+      "img": "https://i.imgflip.com/9ehk.jpg",
+      "date": "2018-08-08",
+      "profile": {
+          "first_name": "Henry",
+          "last_name": "Bravo"
+      },
+      "fav": false
+  }
+]
