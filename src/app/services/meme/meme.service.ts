@@ -19,6 +19,10 @@ export class MemeService {
     return this.http.get('./assets/data/memes.json');
   }
 
+  getTemplates(){
+    return this.http.get('https://api.imgflip.com/get_memes');
+  }
+
   updateMeme(meme){
     return this.http.put(this.utilsService.getFormatApiUrl(`meme/${meme.id}`), meme);
   }

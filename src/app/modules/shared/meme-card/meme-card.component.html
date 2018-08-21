@@ -17,16 +17,15 @@
     </figure>
   </div>
   <div class="card-content">
-    <div class="shared">
-      <span class="instagram">
-        <i class="fab fa-instagram"></i>
-      </span>
-      <span class="facebook">
-        <i class="fab fa-facebook-f"></i>
-      </span>
-      <span class="twitter">
-        <i class="fab fa-twitter"></i>
-      </span>
+    <div class="rating">
+      <div *ngFor="let rate of listRating"  (click)="setRating(rate)" >
+        <span class="star empty" *ngIf="!rating[rate]" >
+          <i class="far fa-star"></i>
+        </span>
+        <span class="star full" *ngIf="rating[rate]">
+          <i class="fas fa-star"></i>
+        </span>
+      </div>
     </div>
 
     <div class="vote">

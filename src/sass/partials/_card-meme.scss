@@ -1,3 +1,7 @@
+app-meme-card{
+  width: 100%;
+}
+
 .card-meme{
     max-width: 480px !important;
     margin: 0 auto;
@@ -64,6 +68,17 @@
         padding: 10px 30px;
         box-sizing: border-box;
         height: 60px;
+        border-top: 1px solid #e3e3e3;
+        .rating{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .star{
+            color: #ffee2b;
+            cursor: pointer;
+          }
+        }
         .shared{
             span{
                 font-size: 25px;

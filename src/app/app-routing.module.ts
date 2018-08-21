@@ -20,6 +20,10 @@ const routes: Routes = [
         path: 'home',
         loadChildren: './modules/home/home.module#HomeModule'
       },
+      {
+        path: 'create',
+        loadChildren: './modules/create/create.module#CreateModule'
+      },
     ]
   },
   {
